@@ -282,3 +282,43 @@
                         <p>In the late Elizabethan era, asset allocation thoroughly dictated interpersonal socio-economic relations. A primary point of analysis is found inside William Shakespeare's direct historical testamentary documentation, specifically his controversial final bequest leaving his spouse, Anne Hathaway, his "second-best bed."</p>
                         <p>While modern generic interpretations frequently mistake this as an explicit marital insult, textile and domestic historians clarify that the primary guest bed was the most valuable household estate asset, meaning the second-best bed was their actual intimate, marital domestic furniture piece.</p>
                     </div>
+
+                        <script>
+        // Smoothly switches your left sidebar menu tabs
+        function switchTab(tabId) {
+            document.querySelectorAll('.page-tab').forEach(tab => {
+                tab.classList.remove('active-tab');
+            });
+            document.getElementById(tabId).classList.add('active-tab');
+            
+            // Forces the browser window to focus on the main layout 
+            // so panic key shortcuts activate instantly
+            window.focus();
+        }
+
+        // REDIRECT TRIGGERS
+        function escapeToGoogle() {
+            window.location.href = 'https://google.com';
+        }
+        
+        function escapeToClassroom() {
+            window.location.href = 'https://google.com';
+        }
+
+        // PHYSICAL KEY LISTENER (Locks down the triggers)
+        window.addEventListener('keydown', function(e) {
+            if (e.key === '`' || e.key === 'Escape') {
+                escapeToGoogle();
+            } else if (e.key === '#') {
+                escapeToClassroom();
+            }
+        });
+
+        // Pulls keyboard control safely away from borders if clicked
+        window.addEventListener('click', function() {
+            window.focus();
+        });
+    </script>
+</body>
+</html>
+
