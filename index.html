@@ -3,217 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classroom Revision Hub</title>
+    <title>★ Classroom Revision Hub ★</title>
     <style>
-        /* ✨ CUTECORE PASTEL BLUE THEME ✨ */
+        /* ────────────── ✧ Y2K CUTECORE TERMINAL THEME ✧ ────────────── */
+        
+        /* Custom scrollbar to get rid of corporate look */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e1efff;
+            border-left: 2px solid #94bfff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94bfff;
+            border: 2px solid #e1efff;
+        }
+
         body {
-            background-color: #e3effd; /* Soft cloudy pastel blue background */
-            background-image: radial-gradient(#cbdffa 2px, transparent 2px); /* Cute retro dot grid texture */
-            background-size: 24px 24px;
-            color: #3b5275;
-            font-family: 'Quicksand', 'Comic Sans MS', 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 25px;
-        }
-
-        /* The Main Hub Frame */
-        .container {
-            max-width: 850px;
-            margin: 30px auto;
-            background: #ffffff;
-            padding: 35px;
-            border-radius: 30px; /* Super rounded, bubbly corners */
-            border: 5px solid #a6c9fe; /* Thick, cute border outline */
-            box-shadow: 8px 8px 0px #b2d4ff; /* Hard retro pop-art shadow */
-            position: relative;
-        }
-
-        /* Header Layout */
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: #f0f6ff;
-            padding: 20px;
-            border-radius: 20px;
-            border: 4px dashed #b7d5ff; /* Whimsical dashed lines */
-            margin-bottom: 25px;
-        }
-
-        .title-area h1 {
-            color: #4b86fd;
-            margin: 0;
-            font-size: 32px;
-            text-shadow: 2px 2px 0px #fff, 4px 4px 0px #d0e3ff; /* Layered text shadow */
-        }
-
-        .title-area p {
-            margin: 5px 0 0 0;
+            background-color: #d1e4ff;
+            /* Authentic Y2K diagonal stripe texture */
+            background-image: linear-gradient(45deg, #c2dbff 25%, transparent 25%, transparent 75%, #c2dbff 75%, #c2dbff), 
+                              linear-gradient(45deg, #c2dbff 25%, #d1e4ff 25%, #d1e4ff 75%, #c2dbff 75%, #c2dbff);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            
+            color: #27406b;
+            /* Raw otaku/weeb terminal pixel font configuration */
+            font-family: 'MS Gothic', 'Courier New', Courier, monospace;
             font-size: 14px;
-            font-weight: bold;
-            color: #7997c4;
-            letter-spacing: 0.5px;
+            margin: 0;
+            padding: 15px;
+            cursor: default;
         }
 
-        /* Mascot Container */
-        .mascot-area {
-            font-size: 45px;
+        /* Top Banner - Retro Fan-shrine Header */
+        #top-banner {
             background: #ffffff;
+            border: 3px double #5799ff;
             padding: 10px;
-            border-radius: 50%;
-            border: 3px solid #a6c9fe;
-            animation: floaty 3s ease-in-out infinite; /* Makes the mascot gently float up and down */
+            text-align: center;
+            margin-bottom: 15px;
+            box-shadow: 4px 4px 0px #70a7ff;
         }
 
-        @keyframes floaty {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
+        #top-banner h1 {
+            margin: 5px 0;
+            font-size: 24px;
+            letter-spacing: 2px;
+            color: #357aff;
         }
 
-        /* 🎀 Navigation Ribbon Buttons 🎀 */
-        nav {
-            display: flex;
+        /* 🎪 THE CORE WEBCORE 3-COLUMN LAYOUT 🎪 */
+        #web-layout {
+            display: grid;
+            grid-template-columns: 220px 1fr;
             gap: 15px;
-            margin-bottom: 25px;
-            justify-content: center;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
-        nav button {
-            background-color: #ffffff;
-            border: 4px solid #b2d4ff;
-            padding: 12px 24px;
-            border-radius: 25px;
-            color: #4377db;
-            font-size: 15px;
-            font-weight: 900;
-            cursor: pointer;
-            box-shadow: 4px 4px 0px #b2d4ff;
-            transition: all 0.1s ease;
+        /* LEFT SIDEBARS (They actually exist now!) */
+        .sidebar-box {
+            background: #ffffff;
+            border: 2px solid #5799ff;
+            margin-bottom: 15px;
+            box-shadow: 4px 4px 0px #70a7ff;
         }
 
-        nav button:hover {
-            background-color: #f0f6ff;
-            transform: translate(2px, 2px);
-            box-shadow: 2px 2px 0px #b2d4ff;
+        .box-header {
+            background: #5799ff;
+            color: #ffffff;
+            padding: 4px 8px;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #5799ff;
         }
 
-        nav button:active {
-            transform: translate(4px, 4px);
-            box-shadow: 0px 0px 0px #b2d4ff;
+        .box-content {
+            padding: 12px;
         }
 
-        /* Study & Text Panels */
-        .content-section {
+        /* Retro Navigation Links */
+        .nav-link {
+            display: block;
+            background: #f0f6ff;
+            border: 1px solid #94bfff;
+            color: #357aff;
+            padding: 6px;
+            margin-bottom: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .nav-link:hover {
+            background: #357aff;
+            color: #ffffff;
+            border-color: #205ecc;
+        }
+
+        /* Mascot / Status Box Custom Elements */
+        .mascot-window {
+            text-align: center;
+            font-size: 12px;
+            color: #6182ba;
+        }
+        
+        .mascot-avatar {
+            font-size: 40px;
+            margin: 10px 0;
+            display: inline-block;
+            animation: bounceRetro 0.6s infinite alternate;
+        }
+
+        @keyframes bounceRetro {
+            from { transform: translateY(0); }
+            to { transform: translateY(-5px); }
+        }
+
+        /* MAIN WEB CONTENT WINDOW (Right Column) */
+        #main-window {
+            background: #ffffff;
+            border: 3px solid #5799ff;
+            box-shadow: 6px 6px 0px #70a7ff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #window-topbar {
+            background: linear-gradient(90deg, #357aff, #94bfff);
+            color: white;
+            padding: 6px 10px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #205ecc;
+        }
+
+        .window-button {
+            background: #ffffff;
+            border: 1px solid #205ecc;
+            color: #205ecc;
+            font-size: 10px;
+            padding: 1px 5px;
+            font-weight: bold;
+        }
+
+        #window-view {
+            padding: 20px;
+            overflow-y: auto;
+            min-height: 450px;
+        }
+
+        /* Content tab containers */
+        .page-tab {
             display: none;
-            background: #f9fcff;
-            padding: 25px;
-            border-radius: 22px;
-            border: 4px solid #c2dcff;
         }
 
-        .active {
+        .page-tab.active-tab {
             display: block;
         }
 
-        h2 {
-            color: #4173d6;
-            font-size: 22px;
-            margin-top: 0;
-            border-bottom: 3px dotted #cbdffa;
-            padding-bottom: 10px;
-        }
-
-        .essay-text {
-            line-height: 1.7;
-            font-size: 15px;
-            color: #475b7a;
-        }
-
-        .essay-text p {
-            background: #ffffff;
+        /* Raw Text Elements (Dostoevsky Literature Section) */
+        .lit-frame {
+            border: 1px dashed #5799ff;
+            background: #f7faff;
             padding: 15px;
-            border-radius: 15px;
-            border: 2px solid #e1eefa;
+            line-height: 1.6;
             margin-bottom: 15px;
         }
 
-        /* Game Box Iframe Decoration */
-        .iframe-wrapper {
-            background: #e8f2fe;
-            padding: 15px;
-            border-radius: 25px;
-            border: 4px dashed #a6c9fe;
+        .lit-frame h3 {
+            margin-top: 0;
+            color: #357aff;
+            border-bottom: 1px solid #94bfff;
+            padding-bottom: 4px;
+        }
+
+        /* Arcade Frame Decoration */
+        .arcade-container {
+            border: 4px inset #94bfff;
+            background: #000000;
+            padding: 5px;
         }
 
         iframe {
             width: 100%;
-            height: 520px;
-            border: 4px solid #ffffff;
-            border-radius: 18px;
-            box-shadow: 0 4px 12px rgba(166, 201, 254, 0.3);
+            height: 480px;
+            border: none;
+            background: #ffffff;
+        }
+
+        /* Marquee Alert Info */
+        .marquee-alert {
+            background: #fff0f5;
+            border: 1px solid #ffb6c1;
+            color: #d15c7d;
+            padding: 4px;
+            font-size: 11px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <div class="title-area">
-            <h1>Classroom Revision Portal 📑</h1>
-            <p>✦ self-guided workspace & lit hub ✦</p>
-        </div>
-        <!-- Anime Mascot / Graphic Placeholder -->
-        <div class="mascot-area">💙</div> 
-    </header>
-
-    <nav>
-        <button onclick="showSection('english')">📖 English Lit</button>
-        <button onclick="showSection('maths')">📐 Advanced Maths</button>
-        <button onclick="showSection('simulations')">🧪 Logic Labs</button>
-    </nav>
-
-    <!-- ENGLISH TAB -->
-    <div id="english" class="content-section active">
-        <h2>Module 1: The Social Critiques of Dostoevsky & Shakespeare</h2>
-        <div class="essay-text">
-            <p><strong>Analysis of Household Dynamics:</strong> In the late Elizabethan era, property distribution often dictated interpersonal relations. A fascinating example of socio-economic commentary is found within historical testamentary documentation, specifically William Shakespeare's controversial final bequest leaving his spouse, Anne Hathaway, his "second-best bed." While modern interpretations mistake this as a direct insult, textile historians point out that the primary guest bed was the most valuable asset, making the second-best bed their actual intimate, marital asset...</p>
-            <p><strong>Crime and Punishment:</strong> Exploring the psychological weight of guilt through Raskolnikov's internal monologue allows students to evaluate existential philosophy in 19th-century Russia...</p>
-        </div>
+    <!-- TOP HEADER SHRINE -->
+    <div id="top-banner">
+        <h1>✧ CLASSROOM REVISION PORTAL v1.02 ✧</h1>
+        <div style="font-size: 11px; color: #6182ba;">※ [uk-student-network] ✦ optimized for self-study and literature analysis ✦ ※</div>
     </div>
 
-    <!-- MATHS TAB -->
-    <div id="maths" class="content-section">
-        <h2>Module 2: Algebraic Calculus & Equations</h2>
-        <div class="essay-text">
-            <p>Your friend can design complex mathematical expressions here to make sure any passing teacher is fully convinced this is high-level review coursework!</p>
+    <!-- MAIN 3-COLUMN CORE -->
+    <div id="web-layout">
+        
+        <!-- LEFT PANELS COLLAPSED TOGETHER -->
+        <div id="left-column">
+            
+            <!-- NAV BOX -->
+            <div class="sidebar-box">
+                <div class="box-header">📂 SITE DIRECTORY</div>
+                <div class="box-content">
+                    <a href="#" class="nav-link" onclick="switchTab('english')">📖 English_Lit.txt</a>
+                    <a href="#" class="nav-link" onclick="switchTab('maths')">📐 Calc_Modules.exe</a>
+                    <a href="#" class="nav-link" onclick="switchTab('simulations')">🎮 Logic_Labs.bin</a>
+                </div>
+            </div>
+
+            <!-- TERMINAL MASCOT STATUS -->
+            <div class="sidebar-box">
+                <div class="box-header">🌐 MAI_TERMINAL.SYS</div>
+                <div class="box-content mascot-window">
+                    <div class="mascot-avatar">(｡♥‿♥｡)</div>
+                    <div style="font-weight: bold; color: #357aff; margin-bottom: 4px;">STATUS: ONLINE</div>
+                    <div>"Welcome to the portal! Keep reading your assignments carefully."</div>
+                    <div style="margin-top: 8px; border-top: 1px dotted #94bfff; padding-top: 4px; font-size: 10px;">
+                        ★ Sparkles: 4,021<br>
+                        ★ Mood: Comfy
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
 
-    <!-- ARCADE EMBED TAB -->
-    <div id="simulations" class="content-section">
-        <h2>Interactive Logic Simulations</h2>
-        <p style="margin-bottom: 15px; font-weight: bold; color: #7997c4;">Analyzing algorithmic response loops via sandboxed canvas modules:</p>
-        <div class="iframe-wrapper">
-            <iframe src="https://play2048.co"></iframe>
-        </div>
-    </div>
-</div>
+        <!-- RIGHT MAIN APPLICATION WINDOW -->
+        <div id="main-window">
+            <div id="window-topbar">
+                <span>C:\Windows\System32\classroom_revision.exe</span>
+                <div>
+                    <button class="window-button">_</button>
+                    <button class="window-button">X</button>
+                </div>
+            </div>
+            
+            <div id="window-view">
+                
+                <div class="marquee-alert">
+                    <marquee scrollamount="3">✦ WELCOME TO CLASSROOM REVISION HUB ✦ TEACHER ALIBI CORE IS ACTIVATED ✦ PRESS ESC OR BACKTICK TO INITIALLY REDIRECT TO GOOGLE CLASSROOM ✦</marquee>
+                </div>
 
-<script>
-    function showSection(sectionId) {
-        document.querySelectorAll('.content-section').forEach(sec => {
-            sec.classList.remove('active');
-        });
-        document.getElementById(sectionId).classList.add('active');
-    }
+                <!-- ENGLISH TEXT DATABASE -->
+                <div id="english" class="page-tab active-tab">
+                    <div class="lit-frame">
+                        <h3>[ANALYSIS_01] Shakespearean Testamentary Property Distribution</h3>
+                        <p>In the late Elizabethan era, asset allocation thoroughly dictated interpersonal socio-economic relations. A primary point of analysis is found inside William Shakespeare's direct historical testamentary documentation, specifically his controversial final bequest leaving his spouse, Anne Hathaway, his "second-best bed."</p>
+                        <p>While modern generic interpretations frequently mistake this as an explicit marital insult, textile and domestic historians clarify that the primary guest bed was the most valuable household estate asset, meaning the second-best bed was their actual intimate, marital domestic furniture piece.</p>
+                    </div>
 
-    // THE PANIC KEY: Press "~" or "Escape" to instantly jump to security safety
-    window.addEventListener('keydown', function(e) {
-        if (e.key === '`' || e.key === 'Escape') {
-            window.location.href = 'https://google.com';
-        }
-    });
-</script>
+                    <div class="lit-frame">
+                        <h3>[ANALYSIS_02] Psychological Guilt in 19th-Century Russian Realism</h3>
+                        <p>Evaluating Rodion Raskolnikov's internal monologues during the post-transgression stages of Crime and Punishment. The existential weight of guilt acts as a mechanical proxy for societal isolation, establishing walls of alienation that cannot be processed via standard empirical logic hubs.</p>
+                    </div>
+                </div>
 
-</body>
-</html>
+                <!-- MATHS TEXT DATABASE -->
+                <div id="maths" class="page-tab">
+                    <div class="lit-frame">
+                        <h3>[CALCULUS_MODULE] Advanced Limits & Matrix Functions</h3>
