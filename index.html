@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>★ Classroom Revision Hub ★</title>
     <style>
-        /* ────────────── ✧ Y2K CUTECORE TERMINAL THEME ✧ ────────────── */
+        /* ────────────── ✧ Y2K CUTECORE WEB PLATFORM ✧ ────────────── */
         
-        /* Custom scrollbar to get rid of corporate look */
         ::-webkit-scrollbar {
             width: 12px;
         }
@@ -22,81 +21,76 @@
 
         body {
             background-color: #d1e4ff;
-            /* Authentic Y2K diagonal stripe texture */
             background-image: linear-gradient(45deg, #c2dbff 25%, transparent 25%, transparent 75%, #c2dbff 75%, #c2dbff), 
                               linear-gradient(45deg, #c2dbff 25%, #d1e4ff 25%, #d1e4ff 75%, #c2dbff 75%, #c2dbff);
             background-size: 20px 20px;
             background-position: 0 0, 10px 10px;
             
             color: #27406b;
-            /* Raw otaku/weeb terminal pixel font configuration */
             font-family: 'MS Gothic', 'Courier New', Courier, monospace;
             font-size: 14px;
             margin: 0;
-            padding: 15px;
-            cursor: default;
+            padding: 10px;
         }
 
-        /* Top Banner - Retro Fan-shrine Header */
         #top-banner {
             background: #ffffff;
             border: 3px double #5799ff;
-            padding: 10px;
+            padding: 12px;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             box-shadow: 4px 4px 0px #70a7ff;
+            max-width: 98%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         #top-banner h1 {
             margin: 5px 0;
-            font-size: 24px;
+            font-size: 26px;
             letter-spacing: 2px;
             color: #357aff;
         }
 
-        /* 🎪 THE CORE WEBCORE 3-COLUMN LAYOUT 🎪 */
+        /* WIDE VIEW GRID: Maximizes space use across screens */
         #web-layout {
             display: grid;
-            grid-template-columns: 220px 1fr;
-            gap: 15px;
-            max-width: 1100px;
+            grid-template-columns: 260px 1fr;
+            gap: 12px;
+            width: 99%;
             margin: 0 auto;
         }
 
-        /* LEFT SIDEBARS (They actually exist now!) */
         .sidebar-box {
             background: #ffffff;
             border: 2px solid #5799ff;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             box-shadow: 4px 4px 0px #70a7ff;
         }
 
         .box-header {
             background: #5799ff;
             color: #ffffff;
-            padding: 4px 8px;
+            padding: 5px 10px;
             font-weight: bold;
             font-size: 12px;
             letter-spacing: 1px;
-            text-transform: uppercase;
-            border-bottom: 2px solid #5799ff;
         }
 
         .box-content {
-            padding: 12px;
+            padding: 10px;
         }
 
-        /* Retro Navigation Links */
         .nav-link {
             display: block;
             background: #f0f6ff;
             border: 1px solid #94bfff;
             color: #357aff;
-            padding: 6px;
+            padding: 8px;
             margin-bottom: 8px;
             text-decoration: none;
             font-weight: bold;
-            text-align: center;
+            text-align: left;
             font-size: 13px;
         }
 
@@ -106,7 +100,6 @@
             border-color: #205ecc;
         }
 
-        /* Mascot / Status Box Custom Elements */
         .mascot-window {
             text-align: center;
             font-size: 12px;
@@ -114,30 +107,31 @@
         }
         
         .mascot-avatar {
-            font-size: 40px;
-            margin: 10px 0;
+            font-size: 42px;
+            margin: 8px 0;
             display: inline-block;
             animation: bounceRetro 0.6s infinite alternate;
         }
 
         @keyframes bounceRetro {
             from { transform: translateY(0); }
-            to { transform: translateY(-5px); }
+            to { transform: translateY(-4px); }
         }
 
-        /* MAIN WEB CONTENT WINDOW (Right Column) */
+        /* MAIN APP CONTAINER */
         #main-window {
             background: #ffffff;
             border: 3px solid #5799ff;
             box-shadow: 6px 6px 0px #70a7ff;
             display: flex;
             flex-direction: column;
+            width: 100%;
         }
 
         #window-topbar {
             background: linear-gradient(90deg, #357aff, #94bfff);
             color: white;
-            padding: 6px 10px;
+            padding: 6px 12px;
             font-weight: bold;
             display: flex;
             justify-content: space-between;
@@ -155,12 +149,11 @@
         }
 
         #window-view {
-            padding: 20px;
+            padding: 15px;
             overflow-y: auto;
-            min-height: 450px;
+            min-height: 520px;
         }
 
-        /* Content tab containers */
         .page-tab {
             display: none;
         }
@@ -169,7 +162,6 @@
             display: block;
         }
 
-        /* Raw Text Elements (Dostoevsky Literature Section) */
         .lit-frame {
             border: 1px dashed #5799ff;
             background: #f7faff;
@@ -185,7 +177,6 @@
             padding-bottom: 4px;
         }
 
-        /* Arcade Frame Decoration */
         .arcade-container {
             border: 4px inset #94bfff;
             background: #000000;
@@ -194,66 +185,70 @@
 
         iframe {
             width: 100%;
-            height: 480px;
+            height: 500px;
             border: none;
             background: #ffffff;
         }
 
-        /* Marquee Alert Info */
         .marquee-alert {
             background: #fff0f5;
             border: 1px solid #ffb6c1;
             color: #d15c7d;
-            padding: 4px;
-            font-size: 11px;
+            padding: 6px;
+            font-size: 12px;
             margin-bottom: 15px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <!-- TOP HEADER SHRINE -->
     <div id="top-banner">
-        <h1>✧ CLASSROOM REVISION PORTAL v1.02 ✧</h1>
-        <div style="font-size: 11px; color: #6182ba;">※ [uk-student-network] ✦ optimized for self-study and literature analysis ✦ ※</div>
+        <h1>✧ CLASSROOM REVISION PORTAL ✧</h1>
+        <div style="font-size: 11px; color: #6182ba;">※ Shared Study Platform // Internal Distribution Node ※</div>
     </div>
 
-    <!-- MAIN 3-COLUMN CORE -->
     <div id="web-layout">
         
-        <!-- LEFT PANELS COLLAPSED TOGETHER -->
+        <!-- SIDE PANEL SYSTEM -->
         <div id="left-column">
             
-            <!-- NAV BOX -->
             <div class="sidebar-box">
                 <div class="box-header">📂 SITE DIRECTORY</div>
                 <div class="box-content">
-                    <a href="#" class="nav-link" onclick="switchTab('english')">📖 English_Lit.txt</a>
-                    <a href="#" class="nav-link" onclick="switchTab('maths')">📐 Calc_Modules.exe</a>
-                    <a href="#" class="nav-link" onclick="switchTab('simulations')">🎮 Logic_Labs.bin</a>
+                    <a href="#" class="nav-link" onclick="switchTab('home')">🏠 Home Portal</a>
+                    <a href="#" class="nav-link" onclick="switchTab('english')">📖 English Literature</a>
+                    <a href="#" class="nav-link" onclick="switchTab('maths')">📐 Mathematics Hub</a>
+                    <a href="#" class="nav-link" onclick="switchTab('simulations')">🧪 Digital Media Studies</a>
+                    <a href="#" class="nav-link" onclick="switchTab('media')">🎬 Audio-Visual Archive</a>
                 </div>
             </div>
 
-            <!-- TERMINAL MASCOT STATUS -->
             <div class="sidebar-box">
-                <div class="box-header">🌐 MAI_TERMINAL.SYS</div>
+                <div class="box-header">📋 STATION SPECS</div>
+                <div class="box-content" style="font-size: 11px; line-height: 1.5; color: #4e6a99;">
+                    • Node Status: Secured<br>
+                    • Network Overlays: Active<br>
+                    • Gateway Ping: Minimal<br>
+                    • Data Log: Non-Tracking
+                </div>
+            </div>
+
+            <div class="sidebar-box">
+                <div class="box-header">🌐 SYSTEM RESIDENT</div>
                 <div class="box-content mascot-window">
                     <div class="mascot-avatar">(｡♥‿♥｡)</div>
-                    <div style="font-weight: bold; color: #357aff; margin-bottom: 4px;">STATUS: ONLINE</div>
-                    <div>"Welcome to the portal! Keep reading your assignments carefully."</div>
-                    <div style="margin-top: 8px; border-top: 1px dotted #94bfff; padding-top: 4px; font-size: 10px;">
-                        ★ Sparkles: 4,021<br>
-                        ★ Mood: Comfy
-                    </div>
+                    <div style="font-weight: bold; color: #357aff; margin-bottom: 4px;">SYSTEM: ACTIVE</div>
+                    <div style="font-size: 11px;">"Study loops loaded successfully."</div>
                 </div>
             </div>
 
         </div>
 
-        <!-- RIGHT MAIN APPLICATION WINDOW -->
+        <!-- RIGHT WINDOW HUB -->
         <div id="main-window">
             <div id="window-topbar">
-                <span>C:\Windows\System32\classroom_revision.exe</span>
+                <span>Hub_Environment_Control_Panel</span>
                 <div>
                     <button class="window-button">_</button>
                     <button class="window-button">X</button>
@@ -263,24 +258,27 @@
             <div id="window-view">
                 
                 <div class="marquee-alert">
-                    <marquee scrollamount="3">✦ WELCOME TO CLASSROOM REVISION HUB ✦ TEACHER ALIBI CORE IS ACTIVATED ✦ PRESS ESC OR BACKTICK TO INITIALLY REDIRECT TO GOOGLE CLASSROOM ✦</marquee>
+                    <marquee scrollamount="3">✦ WELCOME BACK ✦ PRESS ESC/BACKTICK TO FLY TO GOOGLE HOMEPAGE ✦ PRESS '#' FOR REAL GOOGLE CLASSROOM ✦</marquee>
                 </div>
 
-                <!-- ENGLISH TEXT DATABASE -->
-                <div id="english" class="page-tab active-tab">
+                <!-- NEW REAL HOMEPAGE TEXT -->
+                <div id="home" class="page-tab active-tab">
                     <div class="lit-frame">
-                        <h3>[ANALYSIS_01] Shakespearean Testamentary Property Distribution</h3>
+                        <h3>Welcome welcome, hi hi!</h3>
+                        <p>Since you are reading this, I'm going to assume it works properly.</p>
+                        <p>If you see a teacher heading towards your desk or walking past, don't panic. Just hit your keybind triggers to instantly switch tabs without looking suspicious:</p>
+                        <ul>
+                            <li>Press <strong>ESC</strong> or the <strong>` (Backtick)</strong> key to immediately clear the site and drop onto the standard <strong>Google homepage</strong>.</li>
+                            <li>Press <strong>#</strong> (Shift + 3) to go straight to the real <strong>Google Classroom dashboard</strong>, depending on what class you are in right now.</li>
+                        </ul>
+                        <p>Use the navigation index on the left sidebar to swap between writing text repositories, formulas, or active evaluation frames.</p>
+                    </div>
+                </div>
+
+                <!-- ENGLISH -->
+                <div id="english" class="page-tab">
+                    <div class="lit-frame">
+                        <h3>[ANALYSIS_01] Shakespearean Property Distribution</h3>
                         <p>In the late Elizabethan era, asset allocation thoroughly dictated interpersonal socio-economic relations. A primary point of analysis is found inside William Shakespeare's direct historical testamentary documentation, specifically his controversial final bequest leaving his spouse, Anne Hathaway, his "second-best bed."</p>
                         <p>While modern generic interpretations frequently mistake this as an explicit marital insult, textile and domestic historians clarify that the primary guest bed was the most valuable household estate asset, meaning the second-best bed was their actual intimate, marital domestic furniture piece.</p>
                     </div>
-
-                    <div class="lit-frame">
-                        <h3>[ANALYSIS_02] Psychological Guilt in 19th-Century Russian Realism</h3>
-                        <p>Evaluating Rodion Raskolnikov's internal monologues during the post-transgression stages of Crime and Punishment. The existential weight of guilt acts as a mechanical proxy for societal isolation, establishing walls of alienation that cannot be processed via standard empirical logic hubs.</p>
-                    </div>
-                </div>
-
-                <!-- MATHS TEXT DATABASE -->
-                <div id="maths" class="page-tab">
-                    <div class="lit-frame">
-                        <h3>[CALCULUS_MODULE] Advanced Limits & Matrix Functions</h3>
